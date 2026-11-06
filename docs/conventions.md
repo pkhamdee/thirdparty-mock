@@ -1,6 +1,6 @@
 # Conventions for thirdparty-mock
 
-What the code does not tell you at a glance. Moved here from pkhamdee/modernapp's `docs/agents/conventions.md` when
+What the code does not tell you at a glance. Moved here from pkhamdee/eshop-infra's `docs/agents/conventions.md` when
 thirdparty-mock got its own repository (ADR 0009); the system-wide conventions (local environment, deploy, human-only
 steps) are still there.
 
@@ -10,5 +10,5 @@ steps) are still there.
   behind `simulatedDelay`, SMS does not. HTML links must be relative (served under `/thirdparty-mock/`). State is
   in memory, one replica. Test ID numbers (outcome by last two digits) are in `src/testIdNumbers.ts`; the 30-day
   re-apply wait follows the ID number, so use a fresh prefix per demo run.
-- Its manifests stay in pkhamdee/modernapp (`../modernapp/deploy/thirdparty/thirdparty-mock/`), with its own Flux
+- Its manifests stay in pkhamdee/eshop-infra (`../eshop-infra/deploy/thirdparty/thirdparty-mock/`), with its own Flux
   image automation: the newest `main-<sha>-<ts>` image from this repository is deployed to `thirdparty`.
